@@ -28,3 +28,14 @@
 
 // DOCUMENT READY FUNCTION
 
+$("document").ready(function(){  
+    var rockPaperScissors = [
+        "rock",
+        "paper", 
+        "scissors"
+    ];
+var x=3-2
+rockPaperScissors [x=Math.floor(Math.random()*3)] 
+console.log (rockPaperScissors.length)
+});
+
