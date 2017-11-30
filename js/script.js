@@ -28,14 +28,31 @@
 
 // DOCUMENT READY FUNCTION
 
-$("document").ready(function(){  
+function getComputerChoice(){  
     var rockPaperScissors = [
         "rock",
         "paper", 
         "scissors"
     ];
-var x=3-2
-rockPaperScissors [x=Math.floor(Math.random()*3)] 
-console.log (rockPaperScissors.length)
-});
+    return "rock";
+var x=rockPaperScissors[Math.floor(Math.random()*3)]; 
+console.log(rockPaperScissors.length);
+}
+        $( document ).ready(function() {
+    console.log( "ready!" );
+    
+        $("button").click(function(){
 
+        var getComputerChoice
+        var usersChoice
+        if(getComputerChoice=== rock && usersChoice===paper){
+        //win!
+        }else if(getComputerChoice===rock && usersChoice=== scissors){
+        //lose
+
+        }else(getComputerChoice===rock && usersChoice===rock){
+        //tie
+        }
+
+});
+});
