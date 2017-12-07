@@ -28,31 +28,37 @@
 
 // DOCUMENT READY FUNCTION
 
-function getComputerChoice(){  
+
+
+        $( document ).ready(function() {
+    console.log( "ready!" );
+    
+        $("button").click(function(){
     var rockPaperScissors = [
         "rock",
         "paper", 
         "scissors"
     ];
-    return "rock";
-var x=rockPaperScissors[Math.floor(Math.random()*3)]; 
-console.log(rockPaperScissors.length);
-}
-        $( document ).ready(function() {
-    console.log( "ready!" );
-    
-        $("button").click(function(){
-
-        var getComputerChoice
-        var usersChoice
-        if(getComputerChoice=== rock && usersChoice===paper){
-        //win!
-        }else if(getComputerChoice===rock && usersChoice=== scissors){
-        //lose
-
-        }else(getComputerChoice===rock && usersChoice===rock){
-        //tie
+        var winnerText = "dont know yet";
+        var getComputerChoice = rockPaperScissors[Math.floor(Math.random()*3)]; 
+        var usersChoice = $("input").val();
+        if((getComputerChoice=== "rock" && usersChoice=== "paper")||
+        (getComputerChoice=== "paper" && usersChoice==="paper")||
+        (getComputerChoice=== "scissors" && usersChoice==="scissors")){
+                winnerText = "It's a tie!";
+        }else if((getComputerChoice=== "rock" && usersChoice==="scissors")||
+        (getComputerChoice=== "paper" && usersChoice==="rock")||
+        (getComputerChoice=== "scissors" && usersChoice==="paper")) {
+                winnerText = "getComputerChoice Wins!!";
+        }else if ((getComputerChoice=== "rock" && usersChoice==="paper")||
+        (getComputerChoice=== "paper" && usersChoice==="scissors")||
+        (getComputerChoice=== "scissors" && usersChoice==="rock")){
+                winnerText = "usersChoice Wins!";
         }
-
-});
+        
+        $("#winner").text(winnerText);
+       
+       console.log(usersChoice);
+       console.log(getComputerChoice);
+        });
 });
